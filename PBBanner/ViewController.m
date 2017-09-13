@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "PBNotificationBanner.h"
 
 @interface ViewController ()
 
@@ -25,5 +26,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)infoEvent:(id)sender {
+    [PBNotificationBanner showInfoWithStatus:@"传输进行中..."];
+}
+
+- (IBAction)errorEvent:(id)sender {
+    [PBNotificationBanner showErrorWithStatus:@"3个上传任务失败"];
+}
+
+- (IBAction)successEvent:(id)sender {
+    [PBNotificationBanner showSuccessWithStatus:@"上传任务完成了"];
+}
 
 @end

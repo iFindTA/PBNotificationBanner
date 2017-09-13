@@ -1,0 +1,15 @@
+PODS:
+  - Masonry (1.0.2)
+  - PBKits (1.2.0)
+
+DEPENDENCIES:
+  - Masonry (~> 1.0.2)
+  - PBKits (~> 1.2.0)
+
+SPEC CHECKSUMS:
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  PBKits: 0e6c61ae784d960e727b378e91daca5387bf94ab
+
+PODFILE CHECKSUM: be84f0a932aa504a56965e61b7a1824e57231c62
+
+COCOAPODS: 1.1.1

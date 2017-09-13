@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,7 +21,50 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3nf-51-dhr">
+                                <rect key="frame" x="36" y="170" width="303" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="mYP-gV-XZe"/>
+                                </constraints>
+                                <state key="normal" title="Info"/>
+                                <connections>
+                                    <action selector="infoEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vXq-b6-Vyj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FTB-Ro-gb3">
+                                <rect key="frame" x="36" y="235" width="303" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="86m-JG-aJp"/>
+                                </constraints>
+                                <state key="normal" title="Error"/>
+                                <connections>
+                                    <action selector="errorEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l1g-S4-Omf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awa-kd-MMY">
+                                <rect key="frame" x="36" y="300" width="303" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="OVz-gO-nEj"/>
+                                </constraints>
+                                <state key="normal" title="Success"/>
+                                <connections>
+                                    <action selector="successEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qBf-7G-QI0"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="awa-kd-MMY" secondAttribute="trailing" constant="20" id="3oA-OY-LCh"/>
+                            <constraint firstItem="awa-kd-MMY" firstAttribute="top" secondItem="FTB-Ro-gb3" secondAttribute="bottom" constant="25" id="51I-ik-rD7"/>
+                            <constraint firstItem="awa-kd-MMY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="8o1-gh-qi7"/>
+                            <constraint firstItem="FTB-Ro-gb3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="AvW-K6-uLE"/>
+                            <constraint firstItem="3nf-51-dhr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="Bt4-7A-djm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FTB-Ro-gb3" secondAttribute="trailing" constant="20" id="P0R-qe-Mgu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3nf-51-dhr" secondAttribute="trailing" constant="20" id="QBN-nd-2Fq"/>
+                            <constraint firstItem="FTB-Ro-gb3" firstAttribute="top" secondItem="3nf-51-dhr" secondAttribute="bottom" constant="25" id="nVS-Y5-Zzp"/>
+                            <constraint firstItem="3nf-51-dhr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="150" id="xX1-LI-nH3"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -48,6 +48,16 @@
                ReferencedContainer = "container:PBBanner.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6083C5C01F68C291001573A1"
+               BuildableName = "PBBannerHUDTests.xctest"
+               BlueprintName = "PBBannerHUDTests"
+               ReferencedContainer = "container:PBBanner.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

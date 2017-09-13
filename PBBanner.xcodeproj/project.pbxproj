@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		486FED9ADC97A629828B45DB /* libPods-PBBannerHUD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D978762FC5182269A19F3F5A /* libPods-PBBannerHUD.a */; };
 		6083C57D1F68BD4F001573A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6083C57C1F68BD4F001573A1 /* main.m */; };
 		6083C5801F68BD4F001573A1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6083C57F1F68BD4F001573A1 /* AppDelegate.m */; };
 		6083C5831F68BD4F001573A1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6083C5821F68BD4F001573A1 /* ViewController.m */; };
@@ -15,6 +16,17 @@
 		6083C58B1F68BD4F001573A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6083C5891F68BD4F001573A1 /* LaunchScreen.storyboard */; };
 		6083C5961F68BD4F001573A1 /* PBBannerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6083C5951F68BD4F001573A1 /* PBBannerTests.m */; };
 		6083C5A11F68BD4F001573A1 /* PBBannerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6083C5A01F68BD4F001573A1 /* PBBannerUITests.m */; };
+		6083C5B31F68BE57001573A1 /* PBNotificationBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 6083C5B21F68BE57001573A1 /* PBNotificationBanner.m */; };
+		6083C5C21F68C291001573A1 /* PBBannerHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6083C5B91F68C291001573A1 /* PBBannerHUD.framework */; };
+		6083C5C91F68C291001573A1 /* PBBannerHUDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6083C5C81F68C291001573A1 /* PBBannerHUDTests.m */; };
+		6083C5CB1F68C291001573A1 /* PBBannerHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 6083C5BB1F68C291001573A1 /* PBBannerHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6083C5CE1F68C291001573A1 /* PBBannerHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6083C5B91F68C291001573A1 /* PBBannerHUD.framework */; };
+		6083C5CF1F68C291001573A1 /* PBBannerHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6083C5B91F68C291001573A1 /* PBBannerHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6083C5E31F690A95001573A1 /* PBNotificationBanner.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6083C5E21F690A95001573A1 /* PBNotificationBanner.bundle */; };
+		6083C5E41F690B11001573A1 /* PBNotificationBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 6083C5B21F68BE57001573A1 /* PBNotificationBanner.m */; };
+		6083C5E51F690B18001573A1 /* PBNotificationBanner.h in Headers */ = {isa = PBXBuildFile; fileRef = 6083C5B11F68BE57001573A1 /* PBNotificationBanner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6083C5E61F690B21001573A1 /* PBNotificationBanner.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6083C5E21F690A95001573A1 /* PBNotificationBanner.bundle */; };
+		8E75EA371C7B9034E0D48C2C /* libPods-PBBanner.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 619862A63338D9AA6444C527 /* libPods-PBBanner.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,9 +44,45 @@
 			remoteGlobalIDString = 6083C5771F68BD4F001573A1;
 			remoteInfo = PBBanner;
 		};
+		6083C5C31F68C291001573A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6083C5701F68BD4F001573A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6083C5B81F68C291001573A1;
+			remoteInfo = PBBannerHUD;
+		};
+		6083C5C51F68C291001573A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6083C5701F68BD4F001573A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6083C5771F68BD4F001573A1;
+			remoteInfo = PBBanner;
+		};
+		6083C5CC1F68C291001573A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6083C5701F68BD4F001573A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6083C5B81F68C291001573A1;
+			remoteInfo = PBBannerHUD;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		6083C5D31F68C291001573A1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6083C5CF1F68C291001573A1 /* PBBannerHUD.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		5CC8FB903802A8310D566AD1 /* Pods-PBBanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PBBanner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PBBanner/Pods-PBBanner.debug.xcconfig"; sourceTree = "<group>"; };
 		6083C5781F68BD4F001573A1 /* PBBanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PBBanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6083C57C1F68BD4F001573A1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6083C57E1F68BD4F001573A1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +99,20 @@
 		6083C59C1F68BD4F001573A1 /* PBBannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PBBannerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6083C5A01F68BD4F001573A1 /* PBBannerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PBBannerUITests.m; sourceTree = "<group>"; };
 		6083C5A21F68BD4F001573A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6083C5B11F68BE57001573A1 /* PBNotificationBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBNotificationBanner.h; sourceTree = "<group>"; };
+		6083C5B21F68BE57001573A1 /* PBNotificationBanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBNotificationBanner.m; sourceTree = "<group>"; };
+		6083C5B91F68C291001573A1 /* PBBannerHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PBBannerHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6083C5BB1F68C291001573A1 /* PBBannerHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PBBannerHUD.h; sourceTree = "<group>"; };
+		6083C5BC1F68C291001573A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6083C5C11F68C291001573A1 /* PBBannerHUDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PBBannerHUDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6083C5C81F68C291001573A1 /* PBBannerHUDTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PBBannerHUDTests.m; sourceTree = "<group>"; };
+		6083C5CA1F68C291001573A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6083C5E21F690A95001573A1 /* PBNotificationBanner.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PBNotificationBanner.bundle; sourceTree = "<group>"; };
+		619862A63338D9AA6444C527 /* libPods-PBBanner.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PBBanner.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F8BBC9C1FD8EFAAEF1BD057 /* Pods-PBBanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PBBanner.release.xcconfig"; path = "Pods/Target Support Files/Pods-PBBanner/Pods-PBBanner.release.xcconfig"; sourceTree = "<group>"; };
+		AD49A0BB3D373D162A0D24D3 /* Pods-PBBannerHUD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PBBannerHUD.release.xcconfig"; path = "Pods/Target Support Files/Pods-PBBannerHUD/Pods-PBBannerHUD.release.xcconfig"; sourceTree = "<group>"; };
+		AE5225A2DA8F81351DE2CE0F /* Pods-PBBannerHUD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PBBannerHUD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PBBannerHUD/Pods-PBBannerHUD.debug.xcconfig"; sourceTree = "<group>"; };
+		D978762FC5182269A19F3F5A /* libPods-PBBannerHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PBBannerHUD.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +120,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6083C5CE1F68C291001573A1 /* PBBannerHUD.framework in Frameworks */,
+				8E75EA371C7B9034E0D48C2C /* libPods-PBBanner.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +139,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6083C5B51F68C291001573A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				486FED9ADC97A629828B45DB /* libPods-PBBannerHUD.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6083C5BE1F68C291001573A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6083C5C21F68C291001573A1 /* PBBannerHUD.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -84,7 +164,11 @@
 				6083C57A1F68BD4F001573A1 /* PBBanner */,
 				6083C5941F68BD4F001573A1 /* PBBannerTests */,
 				6083C59F1F68BD4F001573A1 /* PBBannerUITests */,
+				6083C5BA1F68C291001573A1 /* PBBannerHUD */,
+				6083C5C71F68C291001573A1 /* PBBannerHUDTests */,
 				6083C5791F68BD4F001573A1 /* Products */,
+				67FAB88D55DD54D181FC6855 /* Pods */,
+				6317CA2E9C5FAD48928F4887 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +178,8 @@
 				6083C5781F68BD4F001573A1 /* PBBanner.app */,
 				6083C5911F68BD4F001573A1 /* PBBannerTests.xctest */,
 				6083C59C1F68BD4F001573A1 /* PBBannerUITests.xctest */,
+				6083C5B91F68C291001573A1 /* PBBannerHUD.framework */,
+				6083C5C11F68C291001573A1 /* PBBannerHUDTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,6 +187,7 @@
 		6083C57A1F68BD4F001573A1 /* PBBanner */ = {
 			isa = PBXGroup;
 			children = (
+				6083C5AE1F68BE31001573A1 /* NotificationBanner */,
 				6083C57E1F68BD4F001573A1 /* AppDelegate.h */,
 				6083C57F1F68BD4F001573A1 /* AppDelegate.m */,
 				6083C5811F68BD4F001573A1 /* ViewController.h */,
@@ -140,20 +227,101 @@
 			path = PBBannerUITests;
 			sourceTree = "<group>";
 		};
+		6083C5AE1F68BE31001573A1 /* NotificationBanner */ = {
+			isa = PBXGroup;
+			children = (
+				6083C5AF1F68BE31001573A1 /* assets */,
+				6083C5B01F68BE31001573A1 /* classes */,
+			);
+			path = NotificationBanner;
+			sourceTree = "<group>";
+		};
+		6083C5AF1F68BE31001573A1 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				6083C5E21F690A95001573A1 /* PBNotificationBanner.bundle */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
+		6083C5B01F68BE31001573A1 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				6083C5B11F68BE57001573A1 /* PBNotificationBanner.h */,
+				6083C5B21F68BE57001573A1 /* PBNotificationBanner.m */,
+			);
+			path = classes;
+			sourceTree = "<group>";
+		};
+		6083C5BA1F68C291001573A1 /* PBBannerHUD */ = {
+			isa = PBXGroup;
+			children = (
+				6083C5BB1F68C291001573A1 /* PBBannerHUD.h */,
+				6083C5BC1F68C291001573A1 /* Info.plist */,
+			);
+			path = PBBannerHUD;
+			sourceTree = "<group>";
+		};
+		6083C5C71F68C291001573A1 /* PBBannerHUDTests */ = {
+			isa = PBXGroup;
+			children = (
+				6083C5C81F68C291001573A1 /* PBBannerHUDTests.m */,
+				6083C5CA1F68C291001573A1 /* Info.plist */,
+			);
+			path = PBBannerHUDTests;
+			sourceTree = "<group>";
+		};
+		6317CA2E9C5FAD48928F4887 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D978762FC5182269A19F3F5A /* libPods-PBBannerHUD.a */,
+				619862A63338D9AA6444C527 /* libPods-PBBanner.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		67FAB88D55DD54D181FC6855 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AE5225A2DA8F81351DE2CE0F /* Pods-PBBannerHUD.debug.xcconfig */,
+				AD49A0BB3D373D162A0D24D3 /* Pods-PBBannerHUD.release.xcconfig */,
+				5CC8FB903802A8310D566AD1 /* Pods-PBBanner.debug.xcconfig */,
+				8F8BBC9C1FD8EFAAEF1BD057 /* Pods-PBBanner.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		6083C5B61F68C291001573A1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6083C5CB1F68C291001573A1 /* PBBannerHUD.h in Headers */,
+				6083C5E51F690B18001573A1 /* PBNotificationBanner.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		6083C5771F68BD4F001573A1 /* PBBanner */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6083C5A51F68BD4F001573A1 /* Build configuration list for PBXNativeTarget "PBBanner" */;
 			buildPhases = (
-				6083C5741F68BD4F001573A1 /* Sources */,
+				414F328FC4BC5482F2134386 /* [CP] Check Pods Manifest.lock */,
 				6083C5751F68BD4F001573A1 /* Frameworks */,
+				6083C5741F68BD4F001573A1 /* Sources */,
 				6083C5761F68BD4F001573A1 /* Resources */,
+				6083C5D31F68C291001573A1 /* Embed Frameworks */,
+				E40A13E30C9AE896CB411C00 /* [CP] Embed Pods Frameworks */,
+				A98B9A246BD21C566ACAB06B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6083C5CD1F68C291001573A1 /* PBXTargetDependency */,
 			);
 			name = PBBanner;
 			productName = PBBanner;
@@ -196,6 +364,45 @@
 			productReference = 6083C59C1F68BD4F001573A1 /* PBBannerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		6083C5B81F68C291001573A1 /* PBBannerHUD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6083C5D01F68C291001573A1 /* Build configuration list for PBXNativeTarget "PBBannerHUD" */;
+			buildPhases = (
+				A32AECAED0989CD765627573 /* [CP] Check Pods Manifest.lock */,
+				6083C5B41F68C291001573A1 /* Sources */,
+				6083C5B51F68C291001573A1 /* Frameworks */,
+				6083C5B61F68C291001573A1 /* Headers */,
+				6083C5B71F68C291001573A1 /* Resources */,
+				A2200FB0D8B064DFFB6D0AB1 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PBBannerHUD;
+			productName = PBBannerHUD;
+			productReference = 6083C5B91F68C291001573A1 /* PBBannerHUD.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6083C5C01F68C291001573A1 /* PBBannerHUDTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6083C5D41F68C291001573A1 /* Build configuration list for PBXNativeTarget "PBBannerHUDTests" */;
+			buildPhases = (
+				6083C5BD1F68C291001573A1 /* Sources */,
+				6083C5BE1F68C291001573A1 /* Frameworks */,
+				6083C5BF1F68C291001573A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6083C5C41F68C291001573A1 /* PBXTargetDependency */,
+				6083C5C61F68C291001573A1 /* PBXTargetDependency */,
+			);
+			name = PBBannerHUDTests;
+			productName = PBBannerHUDTests;
+			productReference = 6083C5C11F68C291001573A1 /* PBBannerHUDTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -222,6 +429,17 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 6083C5771F68BD4F001573A1;
 					};
+					6083C5B81F68C291001573A1 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = M8K6A7692X;
+						ProvisioningStyle = Automatic;
+					};
+					6083C5C01F68C291001573A1 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = M8K6A7692X;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6083C5771F68BD4F001573A1;
+					};
 				};
 			};
 			buildConfigurationList = 6083C5731F68BD4F001573A1 /* Build configuration list for PBXProject "PBBanner" */;
@@ -240,6 +458,8 @@
 				6083C5771F68BD4F001573A1 /* PBBanner */,
 				6083C5901F68BD4F001573A1 /* PBBannerTests */,
 				6083C59B1F68BD4F001573A1 /* PBBannerUITests */,
+				6083C5B81F68C291001573A1 /* PBBannerHUD */,
+				6083C5C01F68C291001573A1 /* PBBannerHUDTests */,
 			);
 		};
 /* End PBXProject section */
@@ -251,6 +471,7 @@
 			files = (
 				6083C58B1F68BD4F001573A1 /* LaunchScreen.storyboard in Resources */,
 				6083C5881F68BD4F001573A1 /* Assets.xcassets in Resources */,
+				6083C5E31F690A95001573A1 /* PBNotificationBanner.bundle in Resources */,
 				6083C5861F68BD4F001573A1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,13 +490,107 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6083C5B71F68C291001573A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6083C5E61F690B21001573A1 /* PBNotificationBanner.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6083C5BF1F68C291001573A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		414F328FC4BC5482F2134386 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A2200FB0D8B064DFFB6D0AB1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PBBannerHUD/Pods-PBBannerHUD-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A32AECAED0989CD765627573 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A98B9A246BD21C566ACAB06B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PBBanner/Pods-PBBanner-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E40A13E30C9AE896CB411C00 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PBBanner/Pods-PBBanner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6083C5741F68BD4F001573A1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6083C5B31F68BE57001573A1 /* PBNotificationBanner.m in Sources */,
 				6083C5831F68BD4F001573A1 /* ViewController.m in Sources */,
 				6083C5801F68BD4F001573A1 /* AppDelegate.m in Sources */,
 				6083C57D1F68BD4F001573A1 /* main.m in Sources */,
@@ -298,6 +613,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6083C5B41F68C291001573A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6083C5E41F690B11001573A1 /* PBNotificationBanner.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6083C5BD1F68C291001573A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6083C5C91F68C291001573A1 /* PBBannerHUDTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -310,6 +641,21 @@
 			isa = PBXTargetDependency;
 			target = 6083C5771F68BD4F001573A1 /* PBBanner */;
 			targetProxy = 6083C59D1F68BD4F001573A1 /* PBXContainerItemProxy */;
+		};
+		6083C5C41F68C291001573A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6083C5B81F68C291001573A1 /* PBBannerHUD */;
+			targetProxy = 6083C5C31F68C291001573A1 /* PBXContainerItemProxy */;
+		};
+		6083C5C61F68C291001573A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6083C5771F68BD4F001573A1 /* PBBanner */;
+			targetProxy = 6083C5C51F68C291001573A1 /* PBXContainerItemProxy */;
+		};
+		6083C5CD1F68C291001573A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6083C5B81F68C291001573A1 /* PBBannerHUD */;
+			targetProxy = 6083C5CC1F68C291001573A1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -427,6 +773,7 @@
 		};
 		6083C5A61F68BD4F001573A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CC8FB903802A8310D566AD1 /* Pods-PBBanner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = M8K6A7692X;
@@ -440,6 +787,7 @@
 		};
 		6083C5A71F68BD4F001573A1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F8BBC9C1FD8EFAAEF1BD057 /* Pods-PBBanner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = M8K6A7692X;
@@ -501,6 +849,76 @@
 			};
 			name = Release;
 		};
+		6083C5D11F68C291001573A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE5225A2DA8F81351DE2CE0F /* Pods-PBBannerHUD.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = M8K6A7692X;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = PBBannerHUD/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nanhu.PBBannerHUD;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6083C5D21F68C291001573A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD49A0BB3D373D162A0D24D3 /* Pods-PBBannerHUD.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = M8K6A7692X;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = PBBannerHUD/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nanhu.PBBannerHUD;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6083C5D51F68C291001573A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = M8K6A7692X;
+				INFOPLIST_FILE = PBBannerHUDTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nanhu.PBBannerHUDTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PBBanner.app/PBBanner";
+			};
+			name = Debug;
+		};
+		6083C5D61F68C291001573A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = M8K6A7692X;
+				INFOPLIST_FILE = PBBannerHUDTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nanhu.PBBannerHUDTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PBBanner.app/PBBanner";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -520,6 +938,7 @@
 				6083C5A71F68BD4F001573A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6083C5A81F68BD4F001573A1 /* Build configuration list for PBXNativeTarget "PBBannerTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +947,7 @@
 				6083C5AA1F68BD4F001573A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6083C5AB1F68BD4F001573A1 /* Build configuration list for PBXNativeTarget "PBBannerUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +956,25 @@
 				6083C5AD1F68BD4F001573A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6083C5D01F68C291001573A1 /* Build configuration list for PBXNativeTarget "PBBannerHUD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6083C5D11F68C291001573A1 /* Debug */,
+				6083C5D21F68C291001573A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6083C5D41F68C291001573A1 /* Build configuration list for PBXNativeTarget "PBBannerHUDTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6083C5D51F68C291001573A1 /* Debug */,
+				6083C5D61F68C291001573A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
