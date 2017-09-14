@@ -44,7 +44,9 @@ static UIImage * hud_imageNamed(NSString *name) {
         [self addSubview:lab];
         self.infoLab = lab;
         
-        //self.backgroundColor = [UIColor redColor];
+        [self setNeedsLayout];
+        [self layoutIfNeeded];
+        self.backgroundColor = [UIColor whiteColor];
     }
     return self;
 }
@@ -65,6 +67,11 @@ static UIImage * hud_imageNamed(NSString *name) {
     }];
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [super touchesBegan:touches withEvent:event];
+    //TODO:点击事件传递响应链
+}
+
 @end
 
 #pragma mark --- banner HUD ---
@@ -76,6 +83,7 @@ static UIImage * hud_imageNamed(NSString *name) {
 @property (nonatomic, strong) PBHUDContent *content;
 
 @property (nonatomic, strong) MASConstraint *topConstraint;
+@property (nonatomic, strong) MASConstraint *heightConstraint;
 
 @property (nonatomic, strong) NSTimer *fadeOutTimer;
 @end
@@ -121,7 +129,7 @@ static CGFloat const PB_HUD_BANNER_SHOW_DURATION        =   1.25;
             }
         }];
         [self.topConstraint deactivate];
-        self.backgroundColor = [UIColor blueColor];
+        //self.backgroundColor = [UIColor whiteColor];
     }
     return self;
 }
@@ -151,6 +159,7 @@ static CGFloat const PB_HUD_BANNER_SHOW_DURATION        =   1.25;
                      animations:^{
                          //weakSelf.recordTopConstraint.constant = hidden ? 0.f : -pickerHeight;
                          show?[weakSelf.topConstraint activate]:[weakSelf.topConstraint deactivate];
+                         show?[weakSelf.heightConstraint activate]:[weakSelf.heightConstraint deactivate];
                          [weakSelf layoutSubviews];
                      } completion:^(BOOL finished) {
                          if (finished) {
@@ -196,10 +205,21 @@ static CGFloat const PB_HUD_BANNER_SHOW_DURATION        =   1.25;
         //reset content image and info
         stgSlf.content.iconImg.image = img;
         stgSlf.content.infoLab.text = status;
+        stgSlf.heightConstraint = nil;
         
         /// Add to window
-        [UIApplication sharedApplication].delegate.window.windowLevel = UIWindowLevelAlert;
-        [[UIApplication sharedApplication].delegate.window addSubview:self];
+        [UIApplication sharedApplication].delegate.window.windowLevel = UIWindowLevelStatusBar;
+        UIWindow *keyWindow = [UIApplication sharedApplication].delegate.window;
+        [keyWindow addSubview:self];
+        [self mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(keyWindow).offset(-PB_HUD_BANNER_EIGHT);
+            make.left.right.equalTo(keyWindow);
+            make.height.equalTo(PB_HUD_BANNER_EIGHT).priority(UILayoutPriorityDefaultHigh);
+            if (!self.heightConstraint) {
+                self.heightConstraint = make.height.equalTo(PB_HUD_BANNER_EIGHT * 2).priority(UILayoutPriorityRequired);
+            }
+            [self.heightConstraint deactivate];
+        }];
         
         //show content
         [stgSlf hudWhetherShow:true withCompletion:nil];
@@ -225,6 +245,7 @@ static CGFloat const PB_HUD_BANNER_SHOW_DURATION        =   1.25;
         __block void(^dismissCompletion)() = ^{
             [UIApplication sharedApplication].delegate.window.windowLevel = UIWindowLevelNormal;
             [stgSlf removeFromSuperview];
+            stgSlf.heightConstraint = nil;
         };
         [stgSlf hudWhetherShow:false withCompletion:dismissCompletion];
     }];

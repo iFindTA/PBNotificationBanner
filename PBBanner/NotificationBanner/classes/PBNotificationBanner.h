@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <PBKits/PBKits.h>
+#import <PBKits.h>
 #define MAS_SHORTHAND
 #define MAS_SHORTHAND_GLOBALS
 #import <Masonry/Masonry.h>
