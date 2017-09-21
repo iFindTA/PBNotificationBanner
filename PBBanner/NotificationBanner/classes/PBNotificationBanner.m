@@ -175,15 +175,21 @@ static CGFloat const PB_HUD_BANNER_SHOW_DURATION        =   1.25;
 }
 
 + (void)showInfoWithStatus:(NSString *)status {
-    [[self sharedView] showImage:[self sharedView].infoImg withStatus:status];
+    PBMAINDelay(PBANIMATE_DURATION, ^{
+        [[self sharedView] showImage:[self sharedView].infoImg withStatus:status];
+    });
 }
 
 + (void)showErrorWithStatus:(NSString *)status {
-    [[self sharedView] showImage:[self sharedView].errImg withStatus:status];
+    PBMAINDelay(PBANIMATE_DURATION, ^{
+        [[self sharedView] showImage:[self sharedView].errImg withStatus:status];
+    });
 }
 
 + (void)showSuccessWithStatus:(NSString *)status {
-    [[self sharedView] showImage:[self sharedView].sucImg withStatus:status];
+    PBMAINDelay(PBANIMATE_DURATION, ^{
+        [[self sharedView] showImage:[self sharedView].sucImg withStatus:status];
+    });
 }
 
 + (BOOL)isVisible {
